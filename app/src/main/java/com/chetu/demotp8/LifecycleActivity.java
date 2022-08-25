@@ -6,13 +6,13 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class DemoActivity extends AppCompatActivity {
+public class LifecycleActivity extends AppCompatActivity {
     private String TAG = "DemoActivity";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo);
+        setContentView(R.layout.activity_lifecycle);
 //        Log.e(TAG, "onCreate()");
     }
     @Override
