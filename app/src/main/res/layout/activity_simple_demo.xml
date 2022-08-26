@@ -26,4 +26,5 @@
         android:text="Submit"
         android:textSize="@dimen/txt_size" />
 
+
 </LinearLayout>
