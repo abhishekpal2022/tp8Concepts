@@ -38,5 +38,36 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         android:textSize="@dimen/txt_size" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rg_gender"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        >
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rb_male"
+        android:text="Male"
+        android:layout_weight="1"
+        />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rb_female"
+        android:text="Female"
+        android:layout_weight="1"
+        />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rb_trans_gender"
+        android:text="Trans Gender"
+        android:layout_weight="1"
+        />
+    </RadioGroup>
 
 </LinearLayout>
