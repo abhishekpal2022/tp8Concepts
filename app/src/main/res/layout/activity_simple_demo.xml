@@ -70,4 +70,25 @@
         />
     </RadioGroup>
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_cb1"
+        android:text="Checkbox 1"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_cb2"
+        android:text="Checkbox 2"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_cb3"
+        android:text="Checkbox 3"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_cb4"
+        android:text="Checkbox 4"/>
+
 </LinearLayout>

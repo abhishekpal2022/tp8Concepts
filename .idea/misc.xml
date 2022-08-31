@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/confuser/AndroidStudioProjects/DemoTp8/app/src/main/res/layout/activity_demo.xml" value="0.275" />
+        <entry key="..\:/Users/confuser/AndroidStudioProjects/tp8Concepts/app/src/main/res/drawable/ic_seccting.xml" value="0.2775" />
         <entry key="..\:/Users/confuser/AndroidStudioProjects/tp8Concepts/app/src/main/res/layout/activity_demo.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/confuser/AndroidStudioProjects/tp8Concepts/app/src/main/res/layout/activity_lifecycle.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/confuser/AndroidStudioProjects/tp8Concepts/app/src/main/res/layout/activity_sime_demo.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/confuser/AndroidStudioProjects/tp8Concepts/app/src/main/res/layout/activity_simple_demo.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/confuser/AndroidStudioProjects/tp8Concepts/app/src/main/res/menu/option_menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
