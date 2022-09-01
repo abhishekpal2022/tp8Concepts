@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -12,11 +13,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btnLongPress, btnPopupMenu;
+    private Button btnLongPress, btnPopupMenu, btnLaunchActivity;
+    private EditText etFname, etLname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_menu);
         btnLongPress = findViewById(R.id.btn_long_press);
         btnPopupMenu = findViewById(R.id.btn_popup_menu);
+        btnLaunchActivity = findViewById(R.id.btn_launch_activity);
+        etFname = findViewById(R.id.et_fname);
+        etLname = findViewById(R.id.et_lname);
+
+        btnLaunchActivity.setOnClickListener(this);
         btnPopupMenu.setOnClickListener(this);
         btnLongPress.setOnClickListener(this);
     }
@@ -120,6 +128,12 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                     return false;
                 }
             });
+        }
+        if (view.getId() == R.id.btn_launch_activity){
+            Intent intent = new Intent(MenuActivity.this, SecondActivity.class);
+            intent.putExtra("fname", etFname.getText().toString());
+            intent.putExtra("lname", etLname.getText().toString());
+            startActivity(intent);
         }
     }
 }

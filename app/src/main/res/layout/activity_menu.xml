@@ -22,6 +22,38 @@
         android:layout_centerHorizontal="true"
         android:text="Click Here For Popup"
         android:textSize="@dimen/btn_txt_size"
-        android:layout_alignParentBottom="true"/>
+        android:layout_below="@+id/btn_long_press"/>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_popup_menu">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_fname"
+            android:hint="First name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_lname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/til_fname">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_lname"
+            android:hint="Last name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_launch_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/til_lname"
+        android:layout_centerHorizontal="true"
+        android:text="Launch Activity"
+        android:textSize="@dimen/btn_txt_size" />
 </RelativeLayout>
