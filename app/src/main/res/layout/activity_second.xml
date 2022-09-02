@@ -8,12 +8,24 @@
     tools:context=".SecondActivity">
 
     <TextView
-        android:id="@+id/tv_display"
+        android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="@dimen/txt_size"
         android:layout_centerInParent="true"
+        android:text="Andy Rubin"
+        />
+    <TextView
+        android:id="@+id/tv_mob_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/txt_size"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="5dp"
+        android:text="1234567890"
         />
 
 </RelativeLayout>

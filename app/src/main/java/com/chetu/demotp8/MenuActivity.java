@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnLongPress, btnPopupMenu, btnLaunchActivity;
-    private EditText etFname, etLname;
+    private EditText etFname, etLname, etMobNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         btnLaunchActivity = findViewById(R.id.btn_launch_activity);
         etFname = findViewById(R.id.et_fname);
         etLname = findViewById(R.id.et_lname);
+        etMobNo = findViewById(R.id.et_mob_no);
 
         btnLaunchActivity.setOnClickListener(this);
         btnPopupMenu.setOnClickListener(this);
@@ -130,10 +131,31 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
             });
         }
         if (view.getId() == R.id.btn_launch_activity){
+            //todo: 1. Individually sending data to another activity
+//            Intent intent = new Intent(MenuActivity.this, SecondActivity.class);
+//            intent.putExtra("fname", etFname.getText().toString());
+//            intent.putExtra("lname", etLname.getText().toString());
+//            startActivity(intent);
+
+            // TODO: Sharing data using Bundle
+//            Intent intent = new Intent(MenuActivity.this, SecondActivity.class);
+//            Bundle bundle = new Bundle();
+//            bundle.putString(Keys.FNAME, etFname.getText().toString());
+//            bundle.putString(Keys.LNAME, etLname.getText().toString());
+//            bundle.putLong(Keys.MOB_NO, Long.parseLong(etMobNo.getText().toString()));
+//            intent.putExtra(Keys.BUNDLE, bundle);
+//            startActivity(intent, bundle);
+
+            // TODO: Sharing data using Serializable
+            UserDetails userDetails = new UserDetails();
+            userDetails.setfName(etFname.getText().toString());
+            userDetails.setlName(etLname.getText().toString());
+            userDetails.setMobileNo(Long.parseLong(etMobNo.getText().toString()));
+
             Intent intent = new Intent(MenuActivity.this, SecondActivity.class);
-            intent.putExtra("fname", etFname.getText().toString());
-            intent.putExtra("lname", etLname.getText().toString());
+            intent.putExtra(Keys.SER_DATA, userDetails);
             startActivity(intent);
+
         }
     }
 }
